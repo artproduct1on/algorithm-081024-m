@@ -6,8 +6,20 @@
 //     Если число делится на какое-то из этих чисел, то оно не простое.
 //     Если ни одно из чисел не является делителем, то число простое.
 
-function is_prime(number) {
-    // You code ...
+function isPrime(number) {
+    if (number < 2) return false;
+    if (number === 2) return true;
+    if (number % 2 === 0) return false;
+    for (let i = 3; i <= Math.sqrt(number); i += 2) {
+        if (number % i === 0) return false;
+    }
+    return true;
 }
 
-// Оценить сложность алгоритма
+
+console.log(isPrime(23));
+console.log(isPrime(24));
+console.log(isPrime(1));
+console.log(isPrime(2));
+
+// Оценить сложность алгоритма O(n)

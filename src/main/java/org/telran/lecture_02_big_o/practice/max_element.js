@@ -6,8 +6,10 @@
 //     Если текущий элемент больше наибольшего, обновить значение наибольшего.
 //     Вернуть наибольший элемент.
 
-function max_element(numbers) {
-    // You code ...
+function maxElement(numbers) {
+    return numbers.reduce((acc, n) => acc < n ? n : acc, 0)
 }
 
-// Оценить сложность алгоритма
+console.log(maxElement([1, 5, 2, 5, 745, 8, 5, 9, 2, 44]));
+
+// Оценить сложность алгоритма O(n)
